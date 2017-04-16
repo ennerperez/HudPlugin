@@ -111,7 +111,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="BTProgressHUD, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BTProgressHUD.1.2.0.3\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
+      <HintPath>..\packages\BTProgressHUD.1.2.0.2\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Hud, Version=1.0.6315.24218, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\Xamarin.iOS10\Plugin.Hud.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Hud.Abstractions, Version=1.0.6315.24208, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\Xamarin.iOS10\Plugin.Hud.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -131,16 +137,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Plugin.Hud.Abstractions\Plugin.Hud.Abstractions.csproj">
-      <Project>{2121e5bf-d14b-4a16-994f-5140d40397ef}</Project>
-      <Name>Plugin.Hud.Abstractions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Plugin.Hud.iOS\Plugin.Hud.iOS.csproj">
-      <Project>{4c17f9aa-2cfd-4880-839f-f0cf58121898}</Project>
-      <Name>Plugin.Hud.iOS</Name>
-      <IsAppExtension>false</IsAppExtension>
-      <IsWatchApp>false</IsWatchApp>
-    </ProjectReference>
     <ProjectReference Include="..\HudSample\HudSample.csproj">
       <Project>{ef78dac8-28fe-4a11-ac56-2f776f355916}</Project>
       <Name>HudSample</Name>
