@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.8.1">
+    <id>Xam.Plugin.Hud</id>
+    <version>$version$</version>
+    <title>Hud Plugin for Xamarin and Windows</title>
+    <authors>Enner Pérez</authors>
+    <owners>Enner Pérez</owners>
+    <licenseUrl>https://github.com/ennerperez/HudPlugin/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ennerperez/HudPlugin</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/ennerperez/ConnectivityPlugin/master/art/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Display a HUD message.
+    </description>
+    <releaseNotes>
+      See: https://github.com/ennerperez/HudPlugin/blob/master/CHANGELOG.md
+    </releaseNotes>
+    <summary>Display a HUD message.</summary>
+    <tags>xamarin, pcl, xam.pcl, hud, plugin for xamarin, plugins, xamarin.android, xamarin.ios, android, xamarin.forms, ios</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="nuget\readme.txt" target="readme.txt" />
+
+    <!--Core-->
+    <file src="src\Plugin.Hud\bin\Release\Plugin.Hud.*" target="lib\portable-net45+wp80+win8+wpa81" />
+
+    <!--Xamarin.Android-->
+    <file src="src\Plugin.Hud.Android\bin\Release\Plugin.Hud.*" target="lib\MonoAndroid10" />
+
+    <!--Xamarin.iOS Unified-->
+    <file src="src\Plugin.Hud.iOSUnified\bin\iPhone\Release\Plugin.Hud.*" target="lib\Xamarin.iOS10" />
+
+	</files>
+</package>
