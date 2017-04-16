@@ -1,0 +1,58 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Hud.Abstractions", "Plugin.Hud.Abstractions\Plugin.Hud.Abstractions.csproj", "{2121E5BF-D14B-4A16-994F-5140D40397EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Hud", "Plugin.Hud\Plugin.Hud.csproj", "{F546EC33-14EA-4828-8687-1E097576EB73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Hud.Android", "Plugin.Hud.Android\Plugin.Hud.Android.csproj", "{8954CFC9-6795-4FDF-96A8-B4164D81AE5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62577268-18DC-4581-96A4-51C08328BA8C}"
+	ProjectSection(SolutionItems) = preProject
+		..\appveyor.yml = ..\appveyor.yml
+		..\bootstrapper.ps1 = ..\bootstrapper.ps1
+		..\build.cake = ..\build.cake
+		..\install-android-sdk.ps1 = ..\install-android-sdk.ps1
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Hud.iOS", "Plugin.Hud.iOS\Plugin.Hud.iOS.csproj", "{4C17F9AA-2CFD-4880-839F-F0CF58121898}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{6CE4488D-DBB0-47D0-9420-50494EE8D486}"
+	ProjectSection(SolutionItems) = preProject
+		..\nuget\Plugin.nuspec = ..\nuget\Plugin.nuspec
+		..\nuget\readme.txt = ..\nuget\readme.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2121E5BF-D14B-4A16-994F-5140D40397EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2121E5BF-D14B-4A16-994F-5140D40397EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2121E5BF-D14B-4A16-994F-5140D40397EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2121E5BF-D14B-4A16-994F-5140D40397EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F546EC33-14EA-4828-8687-1E097576EB73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F546EC33-14EA-4828-8687-1E097576EB73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F546EC33-14EA-4828-8687-1E097576EB73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F546EC33-14EA-4828-8687-1E097576EB73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8954CFC9-6795-4FDF-96A8-B4164D81AE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8954CFC9-6795-4FDF-96A8-B4164D81AE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8954CFC9-6795-4FDF-96A8-B4164D81AE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8954CFC9-6795-4FDF-96A8-B4164D81AE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C17F9AA-2CFD-4880-839F-F0CF58121898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C17F9AA-2CFD-4880-839F-F0CF58121898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C17F9AA-2CFD-4880-839F-F0CF58121898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C17F9AA-2CFD-4880-839F-F0CF58121898}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CE4488D-DBB0-47D0-9420-50494EE8D486} = {62577268-18DC-4581-96A4-51C08328BA8C}
+	EndGlobalSection
+EndGlobal
