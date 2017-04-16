@@ -19,6 +19,14 @@
     <summary>Display a HUD message.</summary>
     <tags>xamarin, pcl, xam.pcl, hud, plugin for xamarin, plugins, xamarin.android, xamarin.ios, android, xamarin.forms, ios</tags>
     <dependencies>
+      <group targetFramework="monoandroid70">
+        <dependency id="AndHUD" version="1.2" />
+        <dependency id="Xamarin.Forms" version="2.3" />
+      </group>
+      <group targetFramework="xamarinios10">
+        <dependency id="BTProgressHUD" version="1.2" />
+        <dependency id="Xamarin.Forms" version="2.3" />
+      </group>
     </dependencies>
   </metadata>
   <files>
@@ -33,5 +41,5 @@
     <!--Xamarin.iOS Unified-->
     <file src="src\Plugin.Hud.iOSUnified\bin\iPhone\Release\Plugin.Hud.*" target="lib\Xamarin.iOS10" />
 
-	</files>
+  </files>
 </package>
