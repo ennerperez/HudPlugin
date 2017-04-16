@@ -1,6 +1,6 @@
 ## Hud Plugin for Xamarin and Windows
 
-Simple cross platform plugin to diplay HUD messages.
+Simple cross platform plugin to display HUD messages.
 
 ### Setup
 * Install into your PCL project and Client projects.
