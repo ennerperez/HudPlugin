@@ -7,10 +7,6 @@ var libraries = new Dictionary<string, string> {
  	{ "./src/Hud.sln", "Any" },
 };
 
-var samples = new Dictionary<string, string> {
-	{ "./samples/HudSample.sln", "Win" },
-};
-
 var BuildAction = new Action<Dictionary<string, string>> (solutions =>
 {
 

@@ -11,8 +11,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62577268-18DC-4581-96A4-51C08328BA8C}"
 	ProjectSection(SolutionItems) = preProject
 		..\appveyor.yml = ..\appveyor.yml
+		..\bootstrapper.ps1 = ..\bootstrapper.ps1
 		..\build.cake = ..\build.cake
 		..\component\component.template.yaml = ..\component\component.template.yaml
+		..\install-android-sdk.ps1 = ..\install-android-sdk.ps1
 		..\nuget\Plugin.nuspec = ..\nuget\Plugin.nuspec
 		..\README.md = ..\README.md
 		..\nuget\readme.txt = ..\nuget\readme.txt
