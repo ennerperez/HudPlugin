@@ -4,11 +4,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyDescription("Hud Plugin for Xamarin and Windows")]
+[assembly: AssemblyDescription("Hud Plugin for Xamarin")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Enner Pérez™")]
-[assembly: AssemblyCopyright("Copyright ©  2017 Enner Pérez™")]
-[assembly: AssemblyTrademark("Enner Pérez™")]
+[assembly: AssemblyCompany("Enner Pérez")]
+[assembly: AssemblyCopyright("Copyright © Enner Pérez")]
+[assembly: AssemblyTrademark("Enner Pérez")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]
 

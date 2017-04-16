@@ -3,20 +3,20 @@
   <metadata minClientVersion="2.8.1">
     <id>Xam.Plugin.Hud</id>
     <version>$version$</version>
-    <title>Hud Plugin for Xamarin and Windows</title>
+    <title>Hud Plugin for Xamarin</title>
     <authors>Enner Pérez</authors>
     <owners>Enner Pérez</owners>
     <licenseUrl>https://github.com/ennerperez/HudPlugin/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ennerperez/HudPlugin</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/ennerperez/ConnectivityPlugin/master/art/icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/ennerperez/HudPlugin/master/art/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      Display a HUD message.
+      Display HUD's dialog.
     </description>
     <releaseNotes>
       See: https://github.com/ennerperez/HudPlugin/blob/master/CHANGELOG.md
     </releaseNotes>
-    <summary>Display a HUD message.</summary>
+    <summary>Cross platform plugin to display HUD's dialog through a single API from Xamarin.iOS and Xamarin.Android.</summary>
     <tags>xamarin, pcl, xam.pcl, hud, plugin for xamarin, plugins, xamarin.android, xamarin.ios, android, xamarin.forms, ios</tags>
     <dependencies>
       <group targetFramework="monoandroid70">
