@@ -1,6 +1,8 @@
 ﻿using Foundation;
 using System.Security;
 using BigTed;
+using System;
+using System.Threading;
 
 #if __IOS__ || __TVOS__
 #elif __MACOS__
@@ -20,22 +22,85 @@ namespace Plugin.Hud
     [Preserve(AllMembers = true)]
     public class HudImplementation : BaseHud
     {
-        [SecurityCritical]
         public override void Dismiss()
         {
             BTProgressHUD.Dismiss();
         }
 
-        [SecurityCritical]
-        public override void Show()
+        public override void SetMessage(string message)
         {
-            BTProgressHUD.Show(null, -1, ProgressHUD.MaskType.Black);
+            BTProgressHUD.SetStatus(message);
         }
 
-        [SecurityCritical]
-        public override void Show(string message)
+        //WIP: Timer implementation for autodismiss with [timeout] value
+        internal class timerState
         {
-            BTProgressHUD.Show(message, -1, ProgressHUD.MaskType.Black);
+            internal int counter = 0;
+            internal Timer tmr;
+        }
+        internal void checkTimerState(object state)
+        {
+            var s = (timerState)state;
+            s.counter++;
+
+            if (s.counter == 1)
+            {
+                Dismiss();
+            }
+            else
+            {
+                s.tmr.Dispose();
+                s.tmr = null;
+            }
+
+        }
+        private void autoDismiss(TimeSpan timeout)
+        {
+            var s = new timerState();
+            var timerDelegate = new TimerCallback(checkTimerState);
+            var timer = new Timer(timerDelegate, s, timeout, timeout);
+            s.tmr = timer;
+            while (s.tmr != null)
+                Thread.Sleep(0);
+        }
+    
+        public override void Show(string message = null, float progress = -1F, MaskType mask = MaskType.None, bool centered = true, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, string cancelCaption = null, Action cancelCallback = null)
+        {
+
+            if (string.IsNullOrEmpty(cancelCaption))
+                BTProgressHUD.Show(message, progress, (ProgressHUD.MaskType)mask);
+            else
+                BTProgressHUD.Show(cancelCaption, cancelCallback, message, progress, (ProgressHUD.MaskType)mask);
+
+            if (timeout != null)
+                autoDismiss(timeout.Value);
+
+        }
+
+        //TODO: ShowContinuousProgress
+
+        public override void ShowError(string message = null, MaskType mask = MaskType.None, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, string cancelCaption = null, Action cancelCallback = null)
+        {
+            BTProgressHUD.ShowErrorWithStatus(message, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
+        }
+
+        public override void ShowImage(object image, string message = null, MaskType mask = MaskType.None, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, string cancelCaption = null, Action cancelCallback = null)
+        {
+            BTProgressHUD.ShowImage((UIKit.UIImage)image, message, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
+        }
+
+        public override void ShowSuccess(string message = null, MaskType mask = MaskType.None, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, string cancelCaption = null, Action cancelCallback = null)
+        {
+            BTProgressHUD.ShowSuccessWithStatus(message, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
+        }
+
+        //TODO: ShowToast without mask?
+        public override void ShowToast(string message, MaskType mask = MaskType.None, ToastPosition position = ToastPosition.None, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, Action cancelCallback = null)
+        {
+            if (position == ToastPosition.None)
+                BTProgressHUD.ShowToast(message, (ProgressHUD.MaskType)mask, true, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
+            else
+                BTProgressHUD.ShowToast(message, (ProgressHUD.ToastPosition)position, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
         }
     }
 }
