@@ -8,9 +8,9 @@ namespace Plugin.Hud.Abstractions
 {
     public enum MaskType
     {
-        None = 1,
-        Clear = 2,
-        Black = 3,
-        Gradient = 4 // iOS Only
+        None = 0,
+        Clear = 1,
+        Black = 2,
+        Gradient = 3 // iOS Only
     }
 }

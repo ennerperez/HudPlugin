@@ -68,9 +68,9 @@ namespace Plugin.Hud
         {
 
             if (string.IsNullOrEmpty(cancelCaption))
-                BTProgressHUD.Show(message, progress, (ProgressHUD.MaskType)mask);
+                BTProgressHUD.Show(message, progress, (ProgressHUD.MaskType)mask+1);
             else
-                BTProgressHUD.Show(cancelCaption, cancelCallback, message, progress, (ProgressHUD.MaskType)mask);
+                BTProgressHUD.Show(cancelCaption, cancelCallback, message, progress, (ProgressHUD.MaskType)mask+1);
 
             if (timeout != null)
                 autoDismiss(timeout.Value);
@@ -98,7 +98,7 @@ namespace Plugin.Hud
         public override void ShowToast(string message, MaskType mask = MaskType.None, ToastPosition position = ToastPosition.None, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, Action cancelCallback = null)
         {
             if (position == ToastPosition.None)
-                BTProgressHUD.ShowToast(message, (ProgressHUD.MaskType)mask, true, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
+                BTProgressHUD.ShowToast(message, (ProgressHUD.MaskType)mask+1, true, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
             else
                 BTProgressHUD.ShowToast(message, (ProgressHUD.ToastPosition)position, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
         }
