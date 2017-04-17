@@ -45,10 +45,10 @@
       <HintPath>..\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Hud.Abstractions">
-      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\portable-net45+wp80+win8+wpa81\Plugin.Hud.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Xam.Plugin.Hud.1.0.4\lib\portable-net45+wp80+win8+wpa81\Plugin.Hud.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Hud">
-      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\portable-net45+wp80+win8+wpa81\Plugin.Hud.dll</HintPath>
+      <HintPath>..\packages\Xam.Plugin.Hud.1.0.4\lib\portable-net45+wp80+win8+wpa81\Plugin.Hud.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
