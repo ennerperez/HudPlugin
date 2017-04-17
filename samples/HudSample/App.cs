@@ -7,32 +7,9 @@ namespace HudSample
     {
         public App()
         {
-            var showHUD = new Button
-            {
-                Text = "DisplayHUD"
-            };
 
-            showHUD.Clicked += (sender, args) =>
-            {
-                var hud = CrossHud.Current;
-                hud.Show("Loading...");
-            };
+            this.MainPage = new MainPage();
 
-            // The root page of your application
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = { showHUD }
-                }
-            };
-
-            //MainPage.Appearing += (sender, e) =>
-            //{
-            //	var hud = CrossHud.Current;
-            //	hud.Show("Loading...");
-            //};
         }
 
         protected override void OnStart()

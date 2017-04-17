@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>HudSample.Droid</RootNamespace>
     <AssemblyName>HudSample.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -42,12 +42,6 @@
   <ItemGroup>
     <Reference Include="AndHUD, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AndHUD.1.2.0\lib\MonoAndroid\AndHUD.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.Hud, Version=1.0.6315.24215, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\MonoAndroid10\Plugin.Hud.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.Hud.Abstractions, Version=1.0.6315.24208, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\MonoAndroid10\Plugin.Hud.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -115,6 +109,12 @@
     </Reference>
     <Reference Include="Xamarin.Android.Support.v7.CardView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.25.1.1\lib\MonoAndroid70\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Hud.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\MonoAndroid10\Plugin.Hud.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Hud">
+      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\MonoAndroid10\Plugin.Hud.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
