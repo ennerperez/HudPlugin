@@ -113,11 +113,11 @@
     <Reference Include="BTProgressHUD, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\BTProgressHUD.1.2.0.2\lib\Xamarin.iOS10\BTProgressHUD.dll</HintPath>
     </Reference>
-    <Reference Include="Plugin.Hud, Version=1.0.6315.24218, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\Xamarin.iOS10\Plugin.Hud.dll</HintPath>
+    <Reference Include="Plugin.Hud, Version=1.0.6318.5758, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Hud.1.0.0\lib\Xamarin.iOS10\Plugin.Hud.dll</HintPath>
     </Reference>
-    <Reference Include="Plugin.Hud.Abstractions, Version=1.0.6315.24208, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xam.Plugin.Hud.0.0.9999\lib\Xamarin.iOS10\Plugin.Hud.Abstractions.dll</HintPath>
+    <Reference Include="Plugin.Hud.Abstractions, Version=1.0.6318.5754, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Hud.1.0.0\lib\Xamarin.iOS10\Plugin.Hud.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />

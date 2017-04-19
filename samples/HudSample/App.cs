@@ -1,5 +1,4 @@
-﻿using Plugin.Hud;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace HudSample
 {
@@ -7,32 +6,7 @@ namespace HudSample
     {
         public App()
         {
-            var showHUD = new Button
-            {
-                Text = "DisplayHUD"
-            };
-
-            showHUD.Clicked += (sender, args) =>
-            {
-                var hud = CrossHud.Current;
-                hud.Show("Loading...");
-            };
-
-            // The root page of your application
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = { showHUD }
-                }
-            };
-
-            //MainPage.Appearing += (sender, e) =>
-            //{
-            //	var hud = CrossHud.Current;
-            //	hud.Show("Loading...");
-            //};
+            this.MainPage = new MainPage();
         }
 
         protected override void OnStart()

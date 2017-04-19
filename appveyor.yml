@@ -15,7 +15,9 @@ assembly_info:
   assembly_version: '{version}'
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
-cache: packages
+cache:
+- tools
+- src\packages
 build_script:
 - cmd: >-
     powershell .\install-android-sdk.ps1
@@ -23,7 +25,16 @@ build_script:
 
     powershell .\bootstrapper.ps1 -Target Default -Verbosity diagnostic
 artifacts:
-- path: ./Build/nuget/*.nupkg
+- path: ./build/nuget/*.nupkg
   name: NuGet
 - path: ./component/*.xam
   name: Component
+deploy:
+- provider: Environment
+  name: GitHub
+  on:
+    branch: master
+- provider: Environment
+  name: NuGet
+  on:
+    branch: master

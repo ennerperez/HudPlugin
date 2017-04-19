@@ -6,15 +6,15 @@
     <title>Hud Plugin for Xamarin</title>
     <authors>Enner Pérez</authors>
     <owners>Enner Pérez</owners>
-    <licenseUrl>https://github.com/ennerperez/HudPlugin/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/ennerperez/HudPlugin</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/ennerperez/HudPlugin/master/art/icon.png</iconUrl>
+    <licenseUrl>https://github.com/ennerperez/hudplugin/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ennerperez/hudplugin</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/ennerperez/hudplugin/master/src/.editoricon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       Display HUD's dialog.
     </description>
     <releaseNotes>
-      See: https://github.com/ennerperez/HudPlugin/blob/master/CHANGELOG.md
+      See: https://github.com/ennerperez/hudplugin/blob/master/CHANGELOG.md
     </releaseNotes>
     <summary>Cross platform plugin to display HUD's dialog through a single API from Xamarin.iOS and Xamarin.Android.</summary>
     <tags>xamarin, pcl, xam.pcl, hud, plugin for xamarin, plugins, xamarin.android, xamarin.ios, android, xamarin.forms, ios</tags>

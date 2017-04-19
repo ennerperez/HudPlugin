@@ -1,7 +1,7 @@
 #addin "Cake.FileHelpers"
 
 var TARGET = Argument ("target", Argument ("t", "Default"));
-var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.9999");
+var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "1.0.0");
 
 var libraries = new Dictionary<string, string> {
  	{ "./src/Hud.sln", "Any" },
@@ -59,13 +59,13 @@ Task ("NuGet")
 	.IsDependentOn ("Libraries")
 	.Does (() =>
 {
-    if(!DirectoryExists("./Build/nuget/"))
-        CreateDirectory("./Build/nuget");
+    if(!DirectoryExists("./build/nuget/"))
+        CreateDirectory("./build/nuget");
         
 	NuGetPack ("./nuget/Plugin.nuspec", new NuGetPackSettings { 
 		Version = version,
 		Verbosity = NuGetVerbosity.Detailed,
-		OutputDirectory = "./Build/nuget/",
+		OutputDirectory = "./build/nuget/",
 		BasePath = "./",
 		ToolPath = "./tools/nuget3.exe"
 	});	
@@ -79,7 +79,7 @@ Task ("Clean").Does (() =>
 {
 	CleanDirectory ("./component/tools/");
 
-	CleanDirectories ("./Build/");
+	CleanDirectories ("./build/");
 
 	CleanDirectories ("./**/bin");
 	CleanDirectories ("./**/obj");

@@ -63,7 +63,6 @@ namespace Plugin.Hud.Abstractions
             }
         }
 
-
         #endregion IDisposable
     }
 }
