@@ -2,7 +2,6 @@ Hud Readme
 
 Ensure the NuGet is installed in PCL and Platform specific projects.
 
-[Release Notes - 1.0.0]
-* Initial release
+Call [CrossHud.Current] from any project or PCL to gain access to APIs.
 
-See: https://github.com/ennerperez/HudPlugin/blob/master/CHANGELOG.md for full list
+See: https://github.com/ennerperez/hudplugin/blob/master/CHANGELOG.md for full list

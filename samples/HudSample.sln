@@ -1,12 +1,17 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HudSample", "HudSample\HudSample.csproj", "{EF78DAC8-28FE-4A11-AC56-2F776F355916}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HudSample.Droid", "HudSample.Droid\HudSample.Droid.csproj", "{0AEE3A0F-43DA-45ED-B3AD-BE9375F9CBC1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HudSample.iOS", "HudSample.iOS\HudSample.iOS.csproj", "{4AEC9048-2DBA-4AB2-B45D-01169891DC5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B6CBAAA2-2955-43D8-9E97-44525AE07752}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

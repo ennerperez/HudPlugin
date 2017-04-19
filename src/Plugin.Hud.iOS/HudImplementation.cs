@@ -38,6 +38,7 @@ namespace Plugin.Hud
             internal int counter = 0;
             internal Timer tmr;
         }
+
         internal void checkTimerState(object state)
         {
             var s = (timerState)state;
@@ -52,8 +53,8 @@ namespace Plugin.Hud
                 s.tmr.Dispose();
                 s.tmr = null;
             }
-
         }
+
         private void autoDismiss(TimeSpan timeout)
         {
             var s = new timerState();
@@ -63,18 +64,16 @@ namespace Plugin.Hud
             while (s.tmr != null)
                 Thread.Sleep(0);
         }
-    
+
         public override void Show(string message = null, float progress = -1F, MaskType mask = MaskType.None, bool centered = true, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, string cancelCaption = null, Action cancelCallback = null)
         {
-
             if (string.IsNullOrEmpty(cancelCaption))
-                BTProgressHUD.Show(message, progress, (ProgressHUD.MaskType)mask+1);
+                BTProgressHUD.Show(message, progress, (ProgressHUD.MaskType)mask + 1);
             else
-                BTProgressHUD.Show(cancelCaption, cancelCallback, message, progress, (ProgressHUD.MaskType)mask+1);
+                BTProgressHUD.Show(cancelCaption, cancelCallback, message, progress, (ProgressHUD.MaskType)mask + 1);
 
             if (timeout != null)
                 autoDismiss(timeout.Value);
-
         }
 
         //TODO: ShowContinuousProgress
@@ -98,7 +97,7 @@ namespace Plugin.Hud
         public override void ShowToast(string message, MaskType mask = MaskType.None, ToastPosition position = ToastPosition.None, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, Action cancelCallback = null)
         {
             if (position == ToastPosition.None)
-                BTProgressHUD.ShowToast(message, (ProgressHUD.MaskType)mask+1, true, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
+                BTProgressHUD.ShowToast(message, (ProgressHUD.MaskType)mask + 1, true, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
             else
                 BTProgressHUD.ShowToast(message, (ProgressHUD.ToastPosition)position, timeout.HasValue ? timeout.Value.TotalMilliseconds : 1000);
         }

@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Hud.Abstractions", "Plugin.Hud.Abstractions\Plugin.Hud.Abstractions.csproj", "{2121E5BF-D14B-4A16-994F-5140D40397EF}"
 EndProject
@@ -10,9 +10,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Hud.Android", "Plugi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62577268-18DC-4581-96A4-51C08328BA8C}"
 	ProjectSection(SolutionItems) = preProject
+		.editoricon.png = .editoricon.png
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
 		..\appveyor.yml = ..\appveyor.yml
 		..\bootstrapper.ps1 = ..\bootstrapper.ps1
 		..\build.cake = ..\build.cake
+		..\CHANGELOG.md = ..\CHANGELOG.md
 		..\install-android-sdk.ps1 = ..\install-android-sdk.ps1
 		..\LICENSE = ..\LICENSE
 		..\README.md = ..\README.md
@@ -22,7 +26,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Hud.iOS", "Plugin.Hu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{6CE4488D-DBB0-47D0-9420-50494EE8D486}"
 	ProjectSection(SolutionItems) = preProject
-		..\nuget\Plugin.nuspec = ..\nuget\Plugin.nuspec
+		..\nuget\plugin.nuspec = ..\nuget\plugin.nuspec
 		..\nuget\readme.txt = ..\nuget\readme.txt
 	EndProjectSection
 EndProject

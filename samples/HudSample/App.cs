@@ -1,5 +1,4 @@
-﻿using Plugin.Hud;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace HudSample
 {
@@ -7,9 +6,7 @@ namespace HudSample
     {
         public App()
         {
-
             this.MainPage = new MainPage();
-
         }
 
         protected override void OnStart()

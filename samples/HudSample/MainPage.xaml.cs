@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Plugin.Hud;
+﻿using Plugin.Hud;
 using Plugin.Hud.Abstractions;
+using System;
 using Xamarin.Forms;
 
 namespace HudSample
@@ -34,19 +33,21 @@ namespace HudSample
                 case 1:
                     hud.ShowError(model.Message, (MaskType)model.SelectedMask, timeout: new TimeSpan(0, 0, model.Timeout), cancelCallback: cancelDelegate);
                     break;
+
                 case 2:
                     hud.ShowSuccess(model.Message, (MaskType)model.SelectedMask, timeout: new TimeSpan(0, 0, model.Timeout), cancelCallback: cancelDelegate);
                     break;
+
                 case 3:
                     //TODO: Image implementation fix
                     var logo = ImageSource.FromUri(new Uri(@"https://raw.githubusercontent.com/ennerperez/HudPlugin/master/art/icon.png"));
                     hud.ShowImage(logo, model.Message, (MaskType)model.SelectedMask, timeout: new TimeSpan(0, 0, model.Timeout), cancelCallback: cancelDelegate);
                     break;
+
                 default:
                     hud.Show(model.Message, model.Progress, (MaskType)model.SelectedMask, timeout: new TimeSpan(0, 0, model.Timeout), cancelCallback: cancelDelegate);
                     break;
             }
-
         }
 
         private void buttonToast_Clicked(object sender, EventArgs e)
@@ -55,8 +56,6 @@ namespace HudSample
             var hud = CrossHud.Current;
 
             hud.ShowToast(model.Message, (MaskType)model.SelectedMask, (ToastPosition)model.SelectedPosition, timeout: new TimeSpan(0, 0, model.Timeout), cancelCallback: cancelDelegate);
-
         }
-
     }
 }

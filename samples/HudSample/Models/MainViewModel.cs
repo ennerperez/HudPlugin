@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
+
 namespace HudSample
 {
-
     /// <summary>
     /// private bool _isDefective;
     /// public bool IsDefective
@@ -48,6 +45,7 @@ namespace HudSample
         public string[] Positions { get; private set; }
 
         private string message = "Hi world!";
+
         public string Message
         {
             get { return message; }
@@ -55,6 +53,7 @@ namespace HudSample
         }
 
         private int selectedMask = 0;
+
         public int SelectedMask
         {
             get { return selectedMask; }
@@ -62,6 +61,7 @@ namespace HudSample
         }
 
         private int selectedType = 0;
+
         public int SelectedType
         {
             get { return selectedType; }
@@ -69,6 +69,7 @@ namespace HudSample
         }
 
         private int selectedPosition = 0;
+
         public int SelectedPosition
         {
             get { return selectedPosition; }
@@ -76,6 +77,7 @@ namespace HudSample
         }
 
         private int timeout = 3;
+
         public int Timeout
         {
             get { return timeout; }
@@ -83,11 +85,11 @@ namespace HudSample
         }
 
         private float progress = -1F;
+
         public float Progress
         {
             get { return progress; }
             set { this.SetValue(ref progress, value); }
         }
-
     }
 }
