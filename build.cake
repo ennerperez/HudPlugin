@@ -3,8 +3,12 @@
 var TARGET = Argument ("target", Argument ("t", "Default"));
 var version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "1.0.0");
 
-var libraries = new Dictionary<string, string> {
+var solutions = new Dictionary<string, string> {
  	{ "./src/Hud.sln", "Any" },
+};
+
+var packages = new Dictionary<string, string> {
+ 	{ "./nuget/Package.nuspec", "Any" },
 };
 
 var BuildAction = new Action<Dictionary<string, string>> (solutions =>
@@ -50,28 +54,36 @@ var BuildAction = new Action<Dictionary<string, string>> (solutions =>
 	}
 });
 
-Task("Libraries").Does(()=>
+Task("Solutions").Does(()=>
 {
-    BuildAction(libraries);
+    BuildAction(solutions);
 });
 
 Task ("NuGet")
-	.IsDependentOn ("Libraries")
+	.IsDependentOn ("Solutions")
 	.Does (() =>
 {
     if(!DirectoryExists("./build/nuget/"))
         CreateDirectory("./build/nuget");
-        
-	NuGetPack ("./nuget/Plugin.nuspec", new NuGetPackSettings { 
+
+	var nuGetPackSettings = new NuGetPackSettings
+	{
 		Version = version,
+		IncludeReferencedProjects = true,
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./build/nuget/",
 		BasePath = "./",
 		ToolPath = "./tools/nuget3.exe"
-	});	
+	};
+        
+	foreach (var proj in packages) 
+    {
+		NuGetPack(proj.Key, nuGetPackSettings);
+	}
+
 });
 
-//Build the component, which build samples, nugets, and libraries
+//Build the component, which build samples, nugets, and solutions
 Task ("Default").IsDependentOn("NuGet");
 
 
