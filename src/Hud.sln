@@ -26,7 +26,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Hud.iOS", "Plugin.Hu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{6CE4488D-DBB0-47D0-9420-50494EE8D486}"
 	ProjectSection(SolutionItems) = preProject
-		..\nuget\plugin.nuspec = ..\nuget\plugin.nuspec
+		..\nuget\Package.nuspec = ..\nuget\Package.nuspec
 		..\nuget\readme.txt = ..\nuget\readme.txt
 	EndProjectSection
 EndProject
