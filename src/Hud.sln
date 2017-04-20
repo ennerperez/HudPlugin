@@ -24,12 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.Hud.iOS", "Plugin.Hud.iOS\Plugin.Hud.iOS.csproj", "{4C17F9AA-2CFD-4880-839F-F0CF58121898}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{6CE4488D-DBB0-47D0-9420-50494EE8D486}"
-	ProjectSection(SolutionItems) = preProject
-		..\nuget\Package.nuspec = ..\nuget\Package.nuspec
-		..\nuget\readme.txt = ..\nuget\readme.txt
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,8 +49,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{6CE4488D-DBB0-47D0-9420-50494EE8D486} = {62577268-18DC-4581-96A4-51C08328BA8C}
 	EndGlobalSection
 EndGlobal

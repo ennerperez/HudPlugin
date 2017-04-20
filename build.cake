@@ -8,7 +8,7 @@ var solutions = new Dictionary<string, string> {
 };
 
 var packages = new Dictionary<string, string> {
- 	{ "./nuget/Package.nuspec", "Any" },
+ 	{ "./src/Plugin.Hud/Package.nuspec", "Any" },
 };
 
 var BuildAction = new Action<Dictionary<string, string>> (solutions =>

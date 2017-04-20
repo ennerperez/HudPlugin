@@ -35,6 +35,9 @@ See the [changelog](CHANGELOG.md) for changes.
 
 ### Implementing
 
+**Setup**
+* Available on NuGet: http://www.nuget.org/packages/Xam.Plugin.Hud 
+
 **Add the library to your project**
 * Install into your PCL project and Client projects.
  
@@ -46,9 +49,6 @@ Add the [NuGet Package](https://www.nuget.org/packages/Xam.Plugin.Hud/). Right c
 ### Bugs and feature requests
 
 Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/ennerperez/hudplugin/issues/new).
-
-**Setup**
-* Available on NuGet: http://www.nuget.org/packages/Xam.Plugin.Hud 
 
 ### Documentation
 
