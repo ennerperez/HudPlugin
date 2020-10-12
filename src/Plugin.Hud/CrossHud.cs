@@ -28,7 +28,7 @@ namespace Plugin.Hud
 
         private static IHud CreateHud()
         {
-#if PORTABLE
+#if NETSTANDARD
             return null;
 #else
             return new HudImplementation();
