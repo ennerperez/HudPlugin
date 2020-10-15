@@ -18,7 +18,7 @@ namespace Plugin.Hud
     {
         public override void Dismiss()
         {
-            AndHUD.Shared.Dismiss(Forms.Context);
+            AndHUD.Shared.Dismiss(Android.App.Application.Context);
         }
 
         //TODO: Find a way to change dialog message in Android
@@ -30,40 +30,40 @@ namespace Plugin.Hud
         public override void Show(string message = null, float progress = -1F, Abstractions.MaskType mask = Abstractions.MaskType.Black, bool centered = true, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, string cancelCaption = null, Action cancelCallback = null)
         {
             if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
-            AndHUD.Shared.Show(Forms.Context, message, (int)progress, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, centered, cancelCallback);
+            AndHUD.Shared.Show(Android.App.Application.Context, message, (int)progress, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, centered, cancelCallback);
         }
 
         public override void ShowError(string message = null, Abstractions.MaskType mask = Abstractions.MaskType.Black, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, string cancelCaption = null, Action cancelCallback = null)
         {
             if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
             if (string.IsNullOrEmpty(message))
-                AndHUD.Shared.ShowError(Forms.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                AndHUD.Shared.ShowError(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
             else
-                AndHUD.Shared.ShowErrorWithStatus(Forms.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                AndHUD.Shared.ShowErrorWithStatus(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
         }
 
         public override void ShowImage(object image, string message = null, Abstractions.MaskType mask = Abstractions.MaskType.Black, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, string cancelCaption = null, Action cancelCallback = null)
         {
             if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
             if (image.GetType() == typeof(int))
-                AndHUD.Shared.ShowImage(Forms.Context, (int)image, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                AndHUD.Shared.ShowImage(Android.App.Application.Context, (int)image, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
             else
-                AndHUD.Shared.ShowImage(Forms.Context, (Android.Graphics.Drawables.Drawable)image, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                AndHUD.Shared.ShowImage(Android.App.Application.Context, (Android.Graphics.Drawables.Drawable)image, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
         }
 
         public override void ShowSuccess(string message = null, Abstractions.MaskType mask = Abstractions.MaskType.Black, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, string cancelCaption = null, Action cancelCallback = null)
         {
             if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
             if (string.IsNullOrEmpty(message))
-                AndHUD.Shared.ShowSuccess(Forms.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                AndHUD.Shared.ShowSuccess(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
             else
-                AndHUD.Shared.ShowSuccessWithStatus(Forms.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                AndHUD.Shared.ShowSuccessWithStatus(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
         }
 
         public override void ShowToast(string message, Abstractions.MaskType mask = Abstractions.MaskType.Black, ToastPosition position = ToastPosition.Center, TimeSpan? timeout = default(TimeSpan?), Action clickCallback = null, Action cancelCallback = null)
         {
             if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
-            AndHUD.Shared.ShowToast(Forms.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, (position == ToastPosition.Center), clickCallback, cancelCallback);
+            AndHUD.Shared.ShowToast(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, (position == ToastPosition.Center), clickCallback, cancelCallback);
         }
     }
 }
