@@ -70,6 +70,10 @@
       <Project>{EF78DAC8-28FE-4A11-AC56-2F776F355916}</Project>
       <Name>HudSample</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\Plugin.Hud.Android\Plugin.Hud.Android.csproj">
+      <Project>{8954CFC9-6795-4FDF-96A8-B4164D81AE5E}</Project>
+      <Name>Plugin.Hud.Android</Name>
+    </ProjectReference>
   </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   </Project>

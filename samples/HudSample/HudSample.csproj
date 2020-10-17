@@ -8,14 +8,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Plugin.Hud">
-      <HintPath>..\..\src\Plugin.Hud\bin\Debug\netstandard2.1\Plugin.Hud.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.Hud.Abstractions">
-      <HintPath>..\..\src\Plugin.Hud.Abstractions\bin\Debug\netstandard2.1\Plugin.Hud.Abstractions.dll</HintPath>
-    </Reference>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <ProjectReference Include="..\..\src\Plugin.Hud\Plugin.Hud.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Hud.Abstractions\Plugin.Hud.Abstractions.csproj" />
   </ItemGroup>
 </Project>

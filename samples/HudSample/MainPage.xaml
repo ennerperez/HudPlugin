@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HudSample.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20,40,20,40" />
+        </OnPlatform>
+    </ContentPage.Padding>
     <StackLayout Margin="8">
         <Label Text="Message:" />
         <Entry Text="{Binding Message}" />
@@ -14,7 +19,7 @@
         <Label Text="{Binding Progress, StringFormat='Progress: {0}'}" />
         <Slider Maximum="100" Minimum="-1" Value="{Binding Progress}" />
         <Label Text="Display" />
-        <Button x:Name="buttonHUD" Text="HUD's" />
-        <Button x:Name="buttonToast" Text="Toast's" />
+        <Button x:Name="buttonHUD" Text="HUD's" BackgroundColor="Azure" />
+        <Button x:Name="buttonToast" Text="Toast's" Background="Azure"  />
     </StackLayout>
 </ContentPage>

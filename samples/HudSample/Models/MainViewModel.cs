@@ -17,17 +17,14 @@ namespace HudSample
 
         public void SetValue<T>(ref T property, T value, [CallerMemberName] string propertyName = null)
         {
-            if (!property.Equals(null))
-                if (property.Equals(value)) return;
-
-            OnPropertyChanged(propertyName);
+            if (!property.Equals(null) && property.Equals(value)) return;
             property = value;
+            OnPropertyChanged(propertyName);
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var handler = PropertyChanged;
-            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
