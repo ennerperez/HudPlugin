@@ -212,11 +212,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Plugin.Hud\Plugin.Hud.csproj">
-      <Project>{F546EC33-14EA-4828-8687-1E097576EB73}</Project>
+      <Project>{4FFB7161-6BE7-4381-BA29-11841966B050}</Project>
       <Name>Plugin.Hud</Name>
     </ProjectReference>
     <ProjectReference Include="..\Plugin.Hud.Abstractions\Plugin.Hud.Abstractions.csproj">
-      <Project>{2121E5BF-D14B-4A16-994F-5140D40397EF}</Project>
+      <Project>{10EB0F2D-17AE-4B6C-8C90-B5FCDCF4B908}</Project>
       <Name>Plugin.Hud.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>

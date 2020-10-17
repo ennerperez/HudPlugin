@@ -66,7 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Plugin.Hud.Abstractions\Plugin.Hud.Abstractions.csproj">
-      <Project>{2121e5bf-d14b-4a16-994f-5140d40397ef}</Project>
+      <Project>{10EB0F2D-17AE-4B6C-8C90-B5FCDCF4B908}</Project>
       <Name>Plugin.Hud.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
