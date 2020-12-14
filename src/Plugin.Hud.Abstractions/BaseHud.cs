@@ -5,7 +5,7 @@ namespace Plugin.Hud.Abstractions
     /// <summary>
     /// Base class for all Hud classes
     /// </summary>
-    public abstract class BaseHud : IHud, IDisposable
+    public abstract class BaseHud : ICrossHud
     {
         #region IHud
 
@@ -44,7 +44,7 @@ namespace Plugin.Hud.Abstractions
             Dispose(false);
         }
 
-        private bool disposed = false;
+        private bool _disposed;
 
         /// <summary>
         /// Dispose method
@@ -52,14 +52,14 @@ namespace Plugin.Hud.Abstractions
         /// <param name="disposing"></param>
         public virtual void Dispose(bool disposing)
         {
-            if (!disposed)
+            if (!_disposed)
             {
                 if (disposing)
                 {
                     //dispose only
                 }
 
-                disposed = true;
+                _disposed = true;
             }
         }
 
