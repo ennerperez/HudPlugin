@@ -6,7 +6,7 @@ namespace HudSample
     {
         public App()
         {
-            this.MainPage = new MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

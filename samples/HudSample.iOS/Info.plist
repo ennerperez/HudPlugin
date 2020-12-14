@@ -10,6 +10,7 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
@@ -47,6 +48,8 @@
 	<key>CFBundleDisplayName</key>
 	<string>HudSample</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.HudSample</string>
+	<string>net.ennerperez.hud</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

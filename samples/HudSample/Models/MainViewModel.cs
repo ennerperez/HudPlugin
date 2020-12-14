@@ -41,52 +41,68 @@ namespace HudSample
         public string[] Types { get; private set; }
         public string[] Positions { get; private set; }
 
-        private string message = "Hi world!";
+        private string _message = "Hi world!";
 
         public string Message
         {
-            get { return message; }
-            set { this.SetValue(ref message, value); }
+            get { return _message; }
+            set { SetValue(ref _message, value); }
         }
 
-        private int selectedMask = 0;
+        private int _selectedMask;
 
         public int SelectedMask
         {
-            get { return selectedMask; }
-            set { this.SetValue(ref selectedMask, value); }
+            get { return _selectedMask; }
+            set { SetValue(ref _selectedMask, value); }
         }
 
-        private int selectedType = 0;
+        private int _selectedType;
 
         public int SelectedType
         {
-            get { return selectedType; }
-            set { this.SetValue(ref selectedType, value); }
+            get { return _selectedType; }
+            set { SetValue(ref _selectedType, value); }
         }
 
-        private int selectedPosition = 0;
+        private int _selectedPosition;
 
         public int SelectedPosition
         {
-            get { return selectedPosition; }
-            set { this.SetValue(ref selectedPosition, value); }
+            get { return _selectedPosition; }
+            set { SetValue(ref _selectedPosition, value); }
         }
 
-        private int timeout = 3;
+        private int _timeout = 3;
 
         public int Timeout
         {
-            get { return timeout; }
-            set { this.SetValue(ref timeout, value); }
+            get { return _timeout; }
+            set { SetValue(ref _timeout, value); }
         }
 
-        private float progress = -1F;
+        private float _progress = -1F;
 
         public float Progress
         {
-            get { return progress; }
-            set { this.SetValue(ref progress, value); }
+            get { return _progress; }
+            set { SetValue(ref _progress, value); }
+        }
+
+        private bool _centered = true;
+
+        public bool Centered
+        {
+            get { return _centered; }
+            set { SetValue(ref _centered, value); }
+        }
+
+        private string _cancelCaption = "Cancel";
+
+        public string CancelCaption
+        {
+            get { return _cancelCaption; }
+            set { SetValue(ref _cancelCaption, value); }
         }
     }
 }
