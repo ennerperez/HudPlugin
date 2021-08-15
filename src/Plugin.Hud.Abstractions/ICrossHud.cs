@@ -5,7 +5,7 @@ namespace Plugin.Hud.Abstractions
     /// <summary>
     /// Interface for Hud
     /// </summary>
-    public interface IHud : IDisposable
+    public interface ICrossHud : IDisposable
     {
         void SetMessage(string message);
 

@@ -8,16 +8,16 @@ namespace Plugin.Hud
     /// </summary>
     public class CrossHud
     {
-        private static Lazy<IHud> Implementation = new Lazy<IHud>(() => CreateHud(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        private static Lazy<ICrossHud> _implementation = new Lazy<ICrossHud>(() => CreateHud(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Current settings to use
         /// </summary>
-        public static IHud Current
+        public static ICrossHud Current
         {
             get
             {
-                var ret = Implementation.Value;
+                var ret = _implementation.Value;
                 if (ret == null)
                 {
                     throw NotImplementedInReferenceAssembly();
@@ -26,7 +26,7 @@ namespace Plugin.Hud
             }
         }
 
-        private static IHud CreateHud()
+        private static ICrossHud CreateHud()
         {
 #if NETSTANDARD
             return null;
@@ -37,7 +37,7 @@ namespace Plugin.Hud
 
         internal static Exception NotImplementedInReferenceAssembly()
         {
-            return new NotImplementedException("This functionality is not implemented in the portable version of this assembly.  You should reference the NuGet package from your main application project in order to reference the platform-specific implementation.");
+            return new NotImplementedException("This functionality is not implemented in the portable version of this assembly. You should reference the NuGet package from your main application project in order to reference the platform-specific implementation.");
         }
 
         /// <summary>
@@ -45,10 +45,10 @@ namespace Plugin.Hud
         /// </summary>
         public static void Dispose()
         {
-            if (Implementation != null && Implementation.IsValueCreated)
+            if (_implementation != null && _implementation.IsValueCreated)
             {
-                Implementation.Value.Dispose();
-                Implementation = new Lazy<IHud>(() => CreateHud(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+                _implementation.Value.Dispose();
+                _implementation = new Lazy<ICrossHud>(() => CreateHud(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
             }
         }
     }

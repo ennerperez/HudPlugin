@@ -5,21 +5,27 @@
             <On Platform="iOS" Value="20,40,20,40" />
         </OnPlatform>
     </ContentPage.Padding>
-    <StackLayout Margin="8">
-        <Label Text="Message:" />
-        <Entry Text="{Binding Message}" />
-        <Label Text="Mask:" />
-        <Picker Title="Mask" ItemsSource="{Binding Masks}" SelectedIndex="{Binding SelectedMask}" />
-        <Label Text="Type:" />
-        <Picker Title="Type" ItemsSource="{Binding Types}" SelectedIndex="{Binding SelectedType}" />
-        <Label Text="Position:" />
-        <Picker Title="Positions" ItemsSource="{Binding Positions}" SelectedIndex="{Binding SelectedPosition}" />
-        <Label Text="{Binding Timeout, StringFormat='Timeout: {0}'}" />
-        <Slider Maximum="5" Value="{Binding Timeout}" />
-        <Label Text="{Binding Progress, StringFormat='Progress: {0}'}" />
-        <Slider Maximum="100" Minimum="-1" Value="{Binding Progress}" />
-        <Label Text="Display" />
-        <Button x:Name="buttonHUD" Text="HUD's" BackgroundColor="Azure" />
-        <Button x:Name="buttonToast" Text="Toast's" Background="Azure"  />
-    </StackLayout>
+    <ScrollView>
+        <StackLayout Margin="4">
+            <Label Text="Message:" />
+            <Entry Text="{Binding Message}" />
+            <Label Text="Mask:" />
+            <Picker Title="Mask" ItemsSource="{Binding Masks}" SelectedIndex="{Binding SelectedMask}" />
+            <Label Text="Type:" />
+            <Picker Title="Type" ItemsSource="{Binding Types}" SelectedIndex="{Binding SelectedType}" />
+            <Label Text="Position:" />
+            <Picker Title="Positions" ItemsSource="{Binding Positions}" SelectedIndex="{Binding SelectedPosition}" />
+            <Label Text="{Binding Timeout, StringFormat='Timeout: {0}'}" />
+            <Slider Maximum="5" Value="{Binding Timeout}" />
+            <Label Text="{Binding Progress, StringFormat='Progress: {0}'}" />
+            <Slider Maximum="100" Minimum="-1" Value="{Binding Progress}" />
+            <Label Text="Centered:" />
+            <Switch IsToggled="{Binding Centered}" />
+            <Label Text="Cancel Text:" />
+            <Entry Text="{Binding CancelCaption}" />
+            <Label Text="Display" />
+            <Button x:Name="ButtonHud" Text="HUD's" BackgroundColor="Azure" />
+            <Button x:Name="ButtonToast" Text="Toast's" Background="Azure"  />  
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

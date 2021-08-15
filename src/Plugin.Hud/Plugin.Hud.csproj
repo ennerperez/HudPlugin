@@ -7,4 +7,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Plugin.Hud.Abstractions\Plugin.Hud.Abstractions.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\">
+      <DependentUpon>Models</DependentUpon>
+    </Folder>
+  </ItemGroup>
 </Project>
