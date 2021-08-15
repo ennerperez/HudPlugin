@@ -24,7 +24,6 @@ See the [changelog](CHANGELOG.md) for changes.
 - [x] Initial CrossHUD implementation
 - [ ] iOS timer autoDismiss (WIP)
 - [ ] CrossShowImage
-- [ ] Other platforms
 
 ## Table of contents
 
