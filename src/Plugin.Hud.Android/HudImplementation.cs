@@ -3,9 +3,11 @@ using AndroidHUD;
 using Plugin.Hud.Abstractions;
 using System;
 using System.Security;
+using Android.App;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.Android;
+using Application = Android.App.Application;
 
 [assembly: Dependency(typeof(Plugin.Hud.HudImplementation))]
 
@@ -22,7 +24,7 @@ namespace Plugin.Hud
         {
             Device.BeginInvokeOnMainThread(() =>
             {
-                AndHUD.Shared.Dismiss(Android.App.Application.Context);
+                AndHUD.Shared.Dismiss(Application.Context);
                 //OnHide?.Invoke();
             });
         }
@@ -38,7 +40,7 @@ namespace Plugin.Hud
             Device.BeginInvokeOnMainThread(() =>
             {
                 if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
-                AndHUD.Shared.Show(Android.App.Application.Context, message, (int)progress, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, centered, cancelCallback);
+                AndHUD.Shared.Show(Application.Context, message, (int)progress, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, centered, cancelCallback);
                 //OnShown?.Invoke();
             });
         }
@@ -49,9 +51,9 @@ namespace Plugin.Hud
             {
                 if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
                 if (string.IsNullOrEmpty(message))
-                    AndHUD.Shared.ShowError(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                    AndHUD.Shared.ShowError(Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
                 else
-                    AndHUD.Shared.ShowErrorWithStatus(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                    AndHUD.Shared.ShowErrorWithStatus(Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
                 //OnShown?.Invoke();
             });
         }
@@ -63,14 +65,14 @@ namespace Plugin.Hud
                 if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
                 if (image is int @int)
                 {
-                    AndHUD.Shared.ShowImage(Android.App.Application.Context, @int, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                    AndHUD.Shared.ShowImage(Application.Context, @int, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
                     //OnShown?.Invoke();
                 }
                 else if (image is ImageSource source)
                 {
-                    IImageSourceHandler handler = GetHandler(source);
-                    var drawable = new BitmapDrawable(Android.App.Application.Context.Resources, await handler.LoadImageAsync(source, Android.App.Application.Context));
-                    AndHUD.Shared.ShowImage(Android.App.Application.Context, drawable, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                    var handler = GetHandler(source);
+                    var drawable = new BitmapDrawable(Application.Context.Resources, await handler.LoadImageAsync(source, Application.Context));
+                    AndHUD.Shared.ShowImage(Application.Context, drawable, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
                     //OnShown?.Invoke();
                 }
             });
@@ -108,12 +110,12 @@ namespace Plugin.Hud
                 if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
                 if (string.IsNullOrEmpty(message))
                 {
-                    AndHUD.Shared.ShowSuccess(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                    AndHUD.Shared.ShowSuccess(Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
                     //OnShown?.Invoke();
                 }
                 else
                 {
-                    AndHUD.Shared.ShowSuccessWithStatus(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
+                    AndHUD.Shared.ShowSuccessWithStatus(Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, clickCallback, cancelCallback);
                     //OnShown?.Invoke();
                 }
             });
@@ -124,7 +126,7 @@ namespace Plugin.Hud
             Device.BeginInvokeOnMainThread(() =>
             {
                 if (mask == Abstractions.MaskType.Gradient) mask = Abstractions.MaskType.Black;
-                AndHUD.Shared.ShowToast(Android.App.Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, (position == ToastPosition.Center), clickCallback, cancelCallback);
+                AndHUD.Shared.ShowToast(Application.Context, message, (AndroidHUD.MaskType)mask + 1, timeout, (position == ToastPosition.Center), clickCallback, cancelCallback);
                 //OnShown?.Invoke();
             });
         }
